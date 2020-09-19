@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello():
     return"Hello man. This is great <h1>Yes man</>"
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
