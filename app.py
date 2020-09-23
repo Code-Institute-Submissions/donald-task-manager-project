@@ -2,24 +2,27 @@ import os
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
-from flask import PyMongo
+from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
 
-app.config["MONGO DBNAME"] = os.environ.get("MONGO DBNAME")
-app.config["MONGO URI"] = os.environ.get("MONGO URI")
-app.secret_key = os.environ.get("SECRET KEY")
-
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+print(f"DB: {os.environ.get('MONGO_DBNAME')} \n\tURI: {os.environ.get('MONGO_URI')}")
 mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/allow_tasks")
 def hello():
-    tasks = mongo.db.tasks.find()
-    return render_template("task.html", tasks=tasks)
+    tasks = mongo.db.task.find()
+    print(f"Tasks are: {tasks}")
+    for task in tasks:
+        print(f"\tIndividual task is: {task}")
+    return render_template("tasks.html", tasks=tasks)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
