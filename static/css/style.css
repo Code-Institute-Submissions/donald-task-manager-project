@@ -1,3 +1,35 @@
 body {
-    background-color: red;
+    background-color: lightcyan;
+}
+
+.toptab {
+  overflow: hidden;
+  background-color: #85ee9f34;
+}
+
+.toptab a {
+  float: left;
+  display: ruby-base-container;
+  color: #5b869783;
+  text-align: center;
+  padding: 9px 18px;
+  font-size: 21px;
+}
+
+.toptab a:hover {
+  background-color: darkorchid;
+  color: whitesmoke;
+}
+
+.toptab a.active {
+  background-color: #91af4c;
+  color: #000000e8;
+}
+
+@media screen and (max-width: 580px) {
+  .toptab a:not(:first-child) {display: none;}
+  .toptab a.icon {
+    float: right;
+    display: block;
+  }
 }

@@ -17,11 +17,8 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/allow_tasks")
-def hello():
+def allow_tasks():
     tasks = mongo.db.task.find()
-    print(f"Tasks are: {tasks}")
-    for task in tasks:
-        print(f"\tIndividual task is: {task}")
     return render_template("tasks.html", tasks=tasks)
 
 if __name__ == "__main__":
