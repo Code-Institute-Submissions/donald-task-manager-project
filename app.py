@@ -24,8 +24,26 @@ def allow_tasks():
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
-    return render_template("sign_up.html")
+    if request.method == "POST":
+        first_user = mongo.db.donald_users.find_one(
+            {"first_name": request.form.get("first_name")})
 
+        if first_user:
+            flash("Please enter new name")
+            return redirect(url_for("sign_up"))
+        
+        sign_up = {
+            "first_name": request.form.get("first_name"),
+            "second_name": request.form.get("second_name"),
+            "email": request.form.get("email"),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.donald_users.insert(sign_up)
+
+        session["first"] = request.form.get("first_name")
+        flash("Sign in a success!")
+    return render_template("sign_up.html")
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

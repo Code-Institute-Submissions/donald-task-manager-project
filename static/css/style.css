@@ -6,3 +6,8 @@ body {
     text-shadow: none;
     font-stretch: semi-condensed;
 }
+
+.sign_block {
+    line-height: 3;
+    width: 6;
+}
