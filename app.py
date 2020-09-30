@@ -45,6 +45,26 @@ def sign_up():
     return render_template("sign_up.html")
     
 
+@app.route("/sign_in", methods=["GET", "POST"])
+def sign_in():
+    if request.method == "POST":
+        signed_user = mongo.db.donald_users.find_one(
+            {"email": request.form.get("email")})
+        
+        if signed_user:
+            if check_password_hash(
+                signed_user["password"], request.form.get("password")):
+                    session["first"] = request.form.get("email")
+                    flash("Sign in a success, {}". format(request.form.get("email")))
+            else:
+                flash("wrong email or password")
+                return redirect(url_for("sign_in"))
+        else:
+            flash("wrong email or password")
+            return redirect(url_for("sign_in"))
+        
+    return render_template("sign_in.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
