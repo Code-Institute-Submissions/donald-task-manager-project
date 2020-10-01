@@ -58,7 +58,7 @@ def sign_in():
                 signed_user["password"], request.form.get("password")):
                     session.permanent = True
                     session["first"] = request.form.get("email")
-                    flash("Sign in a success, {}". format(
+                    flash("Welcome, {}". format(
                         request.form.get("email")))
                     return redirect(url_for(
                         "account", email=session["first"]))
@@ -77,7 +77,18 @@ def sign_in():
 def account(email):
     email = mongo.db.donald_users.find_one(
         {"email": session["first"]})["email"]
-    return render_template("account.html", email=email)
+
+    if session["first"]:
+        return render_template("account.html", email=email)
+
+    return redirect(url_for("sign_in"))
+
+
+@app.route("/sign_out")
+def sign_out():
+    flash("Succefully signed out")
+    session.pop("first")
+    return redirect(url_for("sign_in"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

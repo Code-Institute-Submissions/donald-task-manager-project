@@ -19,11 +19,14 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
-            <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-            <li><a href="#">My Story</a></li>
-            <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
-            <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-            <li><a href="#">Sign Out</a></li>
+            {% if session.first %}
+                <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
+                <li><a href="#">My Story</a></li>
+                <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
+            {% endif %}
         </ul>
         </div>
     </nav>
@@ -31,11 +34,14 @@
     <ul class="sidenav" id="mobile-demo">
             <li class="center-align pink-text text-darken-3">Interesting Stories</li>
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
-            <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
-            <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
-            <li><a href="#">My Story</a></li>
-            <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
-            <li><a href="#">Sign Out</a></li>
+            {% if session.first %}
+                <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
+                <li><a href="#">My Story</a></li>
+                <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
+            {% endif %}
     </ul>
   </header>
 
