@@ -21,6 +21,7 @@
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
             <li><a href="#">My Story</a></li>
+            <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
             <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
             <li><a href="#">Sign Out</a></li>
         </ul>
@@ -31,6 +32,7 @@
             <li class="center-align pink-text text-darken-3">Interesting Stories</li>
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
             <li><a href="#">My Story</a></li>
             <li><a href="{{ url_for('sign_in') }}">Sign In</a></li>
             <li><a href="#">Sign Out</a></li>

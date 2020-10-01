@@ -42,6 +42,8 @@ def sign_up():
 
         session["first"] = request.form.get("first_name")
         flash("Sign in a success!")
+        return redirect(url_for("account", email=session["first"]))
+
     return render_template("sign_up.html")
     
 
@@ -54,8 +56,13 @@ def sign_in():
         if signed_user:
             if check_password_hash(
                 signed_user["password"], request.form.get("password")):
+                    session.permanent = True
                     session["first"] = request.form.get("email")
-                    flash("Sign in a success, {}". format(request.form.get("email")))
+                    flash("Sign in a success, {}". format(
+                        request.form.get("email")))
+                    return redirect(url_for(
+                        "account", email=session["first"]))
+
             else:
                 flash("wrong email or password")
                 return redirect(url_for("sign_in"))
@@ -64,6 +71,13 @@ def sign_in():
             return redirect(url_for("sign_in"))
         
     return render_template("sign_in.html")
+
+
+@app.route("/account/<email>", methods=["GET", "POST"])
+def account(email):
+    email = mongo.db.donald_users.find_one(
+        {"email": session["first"]})["email"]
+    return render_template("account.html", email=email)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
