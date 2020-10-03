@@ -90,6 +90,11 @@ def sign_out():
     session.pop("first")
     return redirect(url_for("sign_in"))
 
+
+@app.route("/new_file")
+def new_file():
+    return render_template("new_file.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

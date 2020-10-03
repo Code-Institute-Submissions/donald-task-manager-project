@@ -21,7 +21,7 @@
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
             {% if session.first %}
                 <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
-                <li><a href="#">My Story</a></li>
+                <li><a href="{{ url_for('new_file') }}">New File</a></li>
                 <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
@@ -36,7 +36,7 @@
             <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
             {% if session.first %}
                 <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
-                <li><a href="#">My Story</a></li>
+                <li><a href="{{ url_for('new_file') }}">New File</a></li>
                 <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
