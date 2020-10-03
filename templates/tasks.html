@@ -1,24 +1,29 @@
 {% extends "length.html" %}
 {% block content %}
-    <h1>My website</h1>
-    {% block tasks %}
-    {% endblock %}
 
+    <!--{% for task in tasks %}
+            {{ task.category_name }}
+            {{ task.task_name }}<br>
+            {{ task.task_description }}<br>
+            {{ task.urgent_status }}<br>
+            {{task.submit_date}}<br>
+        {% endfor %}---->
 
-    <ul class="collapsible expandable">
+    <ul class="collapsible expandable collapse">
+        {% for task in tasks %}
         <li>
-        <div class="collapsible-header light-grey-text blue accent-3 text-shadow"><i class="fas fa-pen"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header light-grey-text blue accent-3 text-shadow">
+        <i class="fas fa-pen"></i>
+            <span class="font-weight-bold">{{ task.category_name }}:</span> <span>{{ task.submit_date }}</span>
+        </div>
+        <div class="collapsible-body">
+            <p class="font-weight-bold">{{ task.task_name }}</p>
+            <p class="font-weight-bold">{{ task.task_description }}</p>
+        </div>
         </li>
-        <li>
-        <div class="collapsible-header light-grey-text blue accent-3 text-shadow"><i class="fas fa-pen"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-        <div class="collapsible-header light-grey-text blue accent-3 text-shadow"><i class="fas fa-pen"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
+    
         
 
 {% endblock %}

@@ -15,3 +15,9 @@ body {
 .green-text{
     font-size: 18px;
 }
+
+.collapse{
+    width: 50%;
+    margin: auto 20pc;
+    margin-top: 5px;
+}
