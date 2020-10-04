@@ -93,7 +93,8 @@ def sign_out():
 
 @app.route("/new_file")
 def new_file():
-    return render_template("new_file.html")
+    categories = mongo.db.categories.find().sort("food_list", 1)
+    return render_template("new_file.html", categories=categories)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
