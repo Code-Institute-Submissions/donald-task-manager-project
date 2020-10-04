@@ -18,6 +18,11 @@ body {
 
 .collapse{
     width: 50%;
-    margin: auto 20pc;
+    margin: auto;
     margin-top: 5px;
+}
+
+.card{
+    width: 50%;
+    margin: auto;
 }

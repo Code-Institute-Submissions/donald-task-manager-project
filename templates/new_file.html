@@ -10,22 +10,37 @@
     </div>
 
   
-<div class="row">
-        <form class="col s12">
+<div class="row card light-blue lighten-5">
+        <form class="col s12" method="POST" action="">
         <div class="row">
             <div class="input-field col s6">
             <i class="fa fa-envelope pink-text text-darken-3" aria-hidden="true"></i>
-            <textarea id="icon_prefix" class="materialize-textarea"></textarea>
-            <label for="icon_prefix">Email</label>
+            <textarea id="email" name="email" class="materialize-textarea"></textarea>
+            <label for="email">Email</label>
             </div>
         </div>
-        </form>
-        <form class="col s12">
         <div class="row">
             <div class="input-field col s6">
-            <i class="fas fa-phone pink-text text-darken-3" aria-hidden="true"></i>
-            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-            <label for="icon_prefix2">Telephone</label>
+            <i class="fa fa-user-circle pink-text text-darken-3" aria-hidden="true"></i>
+            <textarea id="first_name" name="first_name" class="materialize-textarea"></textarea>
+            <label for="first_name">First Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+            <i class="fa fa-calendar prefix pink-text text-darken-3" aria-hidden="true"></i>
+            <input type="text" class="datepicker validate" id="datepicker" name="datepicker" minlength="2" maxlength="55">
+            <label for="datepicker">Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="switch">
+            <label for="urgent_status">
+            <input type="checkbox" id="urgent_status" name="urgent_status">
+            <span class="lever"></span>
+            <i class="fa fa-exclamation pink-text text-darken-3" aria-hidden="true"></i>
+            Required
+            </label>
             </div>
         </div>
         </form>
