@@ -23,6 +23,14 @@ body {
 }
 
 .card{
-    width: 50%;
+    width: 60%;
     margin: auto;
+}
+
+.btn-large{
+    margin: 4px;
+}
+
+.waves-effect waves-light{
+    line-height: 20px;
 }

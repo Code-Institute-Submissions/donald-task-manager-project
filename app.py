@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/allow_tasks")
 def allow_tasks():
-    tasks = list(mongo.db.task.find())
+    tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
 
 @app.route("/sign_up", methods=["GET", "POST"])
@@ -91,9 +91,25 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
-@app.route("/new_file")
+@app.route("/new_file", methods=["GET", "POST"])
 def new_file():
-    categories = mongo.db.categories.find().sort("food_list", 1)
+    if request.method == "POST":
+        urgent_status = "open" if request.form.get("urgent_status") else "close"
+        upon = {
+            "category_title": request.form.get("category_title"),
+            "email": request.form.get("email"),
+            "first_name": request.form.get("first_name"),
+            "datepicker": request.form.get("datepicker"),
+            "input_text": request.form.get("input_text"),
+            "textarea2": request.form.get("textarea2"),
+            "urgent_status": urgent_status,
+            "cookies_by": session["first"]
+        }
+        mongo.db.tasks.insert_one(upon)
+        flash("Done")
+        return redirect(url_for("allow_tasks"))
+        
+    categories = mongo.db.categories.find()
     return render_template("new_file.html", categories=categories)
 
 if __name__ == "__main__":
