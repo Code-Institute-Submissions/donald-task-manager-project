@@ -16,11 +16,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 print(f"DB: {os.environ.get('MONGO_DBNAME')} \n\tURI: {os.environ.get('MONGO_URI')}")
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/allow_tasks")
 def allow_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
+
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
@@ -111,6 +113,14 @@ def new_file():
         
     categories = mongo.db.categories.find()
     return render_template("new_file.html", categories=categories)
+
+
+@app.route("/change_file/<task_id>", methods=["GET", "POST"])
+def change_file(task_id):
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    categories = mongo.db.categories.find()
+    return render_template("change_file.html", task=task, categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
