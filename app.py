@@ -117,6 +117,21 @@ def new_file():
 
 @app.route("/change_file/<task_id>", methods=["GET", "POST"])
 def change_file(task_id):
+    if request.method == "POST":
+        urgent_status = "open" if request.form.get("urgent_status") else "close"
+        send = {
+            "category_title": request.form.get("category_title"),
+            "email": request.form.get("email"),
+            "first_name": request.form.get("first_name"),
+            "datepicker": request.form.get("datepicker"),
+            "input_text": request.form.get("input_text"),
+            "textarea2": request.form.get("textarea2"),
+            "urgent_status": urgent_status,
+            "cookies_by": session["first"]
+        }
+        mongo.db.tasks.update({"_id": ObjectId(task_id)}, send)
+        flash("Food Selection changed!!")
+    
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find()
     return render_template("change_file.html", task=task, categories=categories)
