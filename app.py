@@ -108,7 +108,7 @@ def new_file():
             "cookies_by": session["first"]
         }
         mongo.db.tasks.insert_one(upon)
-        flash("Done")
+        flash("Food option successfully done!!")
         return redirect(url_for("allow_tasks"))
         
     categories = mongo.db.categories.find()
@@ -136,6 +136,11 @@ def change_file(task_id):
     categories = mongo.db.categories.find()
     return render_template("change_file.html", task=task, categories=categories)
 
+@app.route("/remove_file/<task_id>")
+def remove_file(task_id):
+    mongo.db.tasks.remove({"_id": ObjectId(task_id)})
+    flash("Food selection removed!")
+    return redirect(url_for("allow_tasks"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

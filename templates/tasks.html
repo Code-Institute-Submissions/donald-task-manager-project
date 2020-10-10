@@ -16,7 +16,7 @@
             <div class="col s4">
             <i class="fas fa-pen"></i>
             {% if session.first|lower == task.cookies_by|lower %}
-                <a class="waves-effect waves-light btn-small"><i class="material-icons left"></i>Button</a>
+                <a href="{{ url_for('remove_file', task_id=task._id) }}" class="waves-effect waves-light btn-small"><i class="material-icons left"></i>Remove</a>
                 <a href="{{ url_for('change_file', task_id=task._id) }}" class="waves-effect waves-light btn-small"><i class="material-icons left"></i>Change</a>
             {% endif %}
             </div>
