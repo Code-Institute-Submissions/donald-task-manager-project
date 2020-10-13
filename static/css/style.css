@@ -34,3 +34,8 @@ body {
 .waves-effect waves-light{
     line-height: 20px;
 }
+
+.carousel{
+    width: 700px;
+    margin: auto;
+}

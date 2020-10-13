@@ -142,6 +142,11 @@ def remove_file(task_id):
     flash("Food selection removed!")
     return redirect(url_for("allow_tasks"))
 
+@app.route("/food_list")
+def food_list():
+    categories = list(mongo.db.categories.find())
+    return render_template("food_list.html", categories=categories)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
