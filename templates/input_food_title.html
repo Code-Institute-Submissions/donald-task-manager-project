@@ -1,0 +1,33 @@
+{% extends "length.html" %}
+{% block content %}
+
+    <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+        <div class="card card-block w-25">
+            <h4 class="lime-text text-accent-4 center-align">Input food</h4>
+        </div>
+        </div>
+    </div>
+    <div class="row card light-blue lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('input_food_title') }}">
+            <div class="row">
+                <div class="input-field col s6">
+                <i class="fa fa-envelope pink-text text-darken-3" aria-hidden="true"></i>
+                <textarea id="category_title" name="category_title" class="materialize-textarea" type="text"></textarea>
+                <label for="category_title">Category Title</label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Change title
+                    <i class="material-icons right"></i>
+                </button>
+                <a href="{{ url_for('food_list') }}" class="btn waves-effect waves-light" type="submit" name="action">Back
+                    <i class="material-icons right"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+          
+
+
+{% endblock %}

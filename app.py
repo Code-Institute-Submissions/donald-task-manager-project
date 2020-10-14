@@ -147,6 +147,18 @@ def food_list():
     categories = list(mongo.db.categories.find())
     return render_template("food_list.html", categories=categories)
 
+@app.route("/input_food_title", methods=["GET", "POST"])
+def input_food_title():
+    if request.method == "POST":
+        food = {
+            "category_title": request.form.get("category_title")
+        }
+        mongo.db.categories.insert_one(food)
+        flash("New food added")
+        return redirect(url_for("food_list"))
+        
+    return render_template("input_food_title.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
