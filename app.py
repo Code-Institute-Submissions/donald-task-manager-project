@@ -156,8 +156,21 @@ def input_food_title():
         mongo.db.categories.insert_one(food)
         flash("New food added")
         return redirect(url_for("food_list"))
-        
+
     return render_template("input_food_title.html")
+
+@app.route("/change_food_title/<category_id>", methods=["POST", "GET"])
+def change_food_title(category_id):
+    if request.method == "POST":
+        forward = {
+            "category_title": request.form.get("category_title")
+        }
+        mongo.db.categories.update({"_id": ObjectId(category_id)}, forward)
+        flash("Food Title changed")
+        return redirect(url_for("food_list"))
+        
+    food_change = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    return render_template("change_food_title.html", category=food_change)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
