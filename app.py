@@ -168,9 +168,17 @@ def change_food_title(category_id):
         mongo.db.categories.update({"_id": ObjectId(category_id)}, forward)
         flash("Food Title changed")
         return redirect(url_for("food_list"))
-        
+
     food_change = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("change_food_title.html", category=food_change)
+
+@app.route("/remove_food_title/<category_id>")
+def remove_food_title(category_id):
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Food Title removed")
+    return redirect(url_for("food_list"))
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
