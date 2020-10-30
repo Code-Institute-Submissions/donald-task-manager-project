@@ -1,0 +1,15 @@
+{{ url_for('account', email=session['first']) }}
+
+<div class="row">
+  <div class="carousel carousel-slider center">
+            {% for category in categories %}
+            <div class="carousel-item white-text" href="#one!">
+                <h2>{{ category.category_title }}</h2>
+                <p class="white-text">This is your first panel</p>
+                <a href="{{ url_for('remove_food_title', category_id=category._id) }}" class="btn waves-effect white grey-text darken-text-2">remove</a>
+                <a href="{{ url_for('change_food_title', category_id=category._id) }}" class="btn waves-effect white grey-text darken-text-2">change</a>
+            </div>
+    {% endfor %}
+  </div>
+</div>
+</div>

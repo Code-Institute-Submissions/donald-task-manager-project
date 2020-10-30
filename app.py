@@ -14,10 +14,16 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 print(f"DB: {os.environ.get('MONGO_DBNAME')} \n\tURI: {os.environ.get('MONGO_URI')}")
+
 mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/allow_tasks")
 def allow_tasks():
     tasks = list(mongo.db.tasks.find())

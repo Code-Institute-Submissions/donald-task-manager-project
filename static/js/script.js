@@ -8,9 +8,12 @@ $(document).ready(function () {
         defaultDate: null,
         yearRange: 5,
         showClearBtn: true,
-
     }); 
-
+    $('.slider').slider({
+        Boolean: true,
+        Number: 400,
+        Number: 500,
+    });
     var elem = document.querySelector('.collapsible.expandable');
     var instance = M.Collapsible.init(elem, {
     accordion: false
@@ -21,6 +24,6 @@ $('.carousel.carousel-slider').carousel({
     indicators: true,
     noWrap: true,
   }); 
-
             
 });
+

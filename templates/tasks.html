@@ -1,14 +1,7 @@
 {% extends "length.html" %}
 {% block content %}
 
-    <!--{% for task in tasks %}
-            {{ task.category_name }}
-            {{ task.task_name }}<br>
-            {{ task.task_description }}<br>
-            {{ task.urgent_status }}<br>
-            {{task.submit_date}}<br>
-        {% endfor %}---->
-
+<div class="index_wood_image">
     <ul class="collapsible expandable collapse">
         {% for task in tasks %}
         <li>
@@ -36,6 +29,9 @@
         {% endfor %}
     </ul>
     
-        
+    <div class="dark_font">
+      To view the lists and make desired changes, please click <a href="{{ url_for('food_list') }}">here</a>
+      </div>
 
+</div>
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "length.html" %}
 {% block content %}
 
+<div class="food_background">
     <div class="row h-100">
         <div class="col-sm-12 my-auto">
         <div class="card card-block w-25">
@@ -74,10 +75,13 @@
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i class="material-icons right"></i>
             </button>
+            <a href="{{ url_for('allow_tasks') }}" class="btn waves-effect waves-light" type="submit" name="action">Back
+                <i class="material-icons right"></i>
+            </a>
         </div>
     </form>
 </div>
-          
+</div>      
 
 
 {% endblock %}

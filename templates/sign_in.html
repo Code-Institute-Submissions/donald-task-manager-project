@@ -3,16 +3,17 @@
 
 <h4 class="center-align cyan-text text-darken-1">Sign In</h4>
 
+<div class="sign_in">
   <div class="row">
     <form class="col s12 panel panel-default" method="POST" action="{{ url_for('sign_in') }}">
       <div class="row panel-body">
-        <div class="input-field col s6">
-          <i class="fas fa-sign-in-alt prefix indigo-text text-lighten-2"></i>
+        <div class="input-field col s6  grey lighten-5">
+          <i class="fas fa-sign-in-alt prefix indigo-text text-darken-5"></i>
           <input id="email" name="email" type="email" class="validate" required>
           <label for="icon_telephone">Email</label>
         </div>
-        <div class="input-field col s6">
-          <i class="fas fa-sign-in-alt prefix indigo-text text-lighten-2"></i>
+        <div class="input-field col s6  grey lighten-5">
+          <i class="fas fa-sign-in-alt prefix indigo-text text-darken-5"></i>
           <input id="password" name="password" type="password" class="validate" required>
           <label for="icon_telephone">Password</label>
         </div>
@@ -25,12 +26,15 @@
     </form>
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 font-text">
         <p class="center-align">
+        Try sign up
         <a href="{{ url_for('sign_up') }}" 
-         class="far fa-sign-in green-text text-darken-3">Try sign up here!</a>
+         class="far fa-sign-in red-text text-lighten-3">here</a>
+        if you do not have an account!
         </p>
     </div>
   </div>
+</div>
 
 {% endblock %}
