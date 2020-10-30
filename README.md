@@ -1,14 +1,17 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
-Welcome lionkiller900,
+# About Nigeria Food Data
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+In this 3rd project will be all about a food data where an individual (who understand's Nigeria food dish) can create a data on what type of dish and when it will be prepared. As you may know Nigeria is a country with several traditions, languages, and cultures. This means there will be several types of food dish from those distinctive cultures. For example with the Yoruba culture, one of the most common food dish is the Amala staple with the drawy Ewa soup. The Igbo culture has one of the most common food dish which is Oha/Okazi soup with the Eba staple. A popular soup very common in the Central South of Nigeria (dubbed the South-South Region) is the Edikaiko. There are many more common foods in Nigeria that can be explored such as Joloff Rice, Plaintain dish, Yam, Cassava, etc. The also reason also for this website is that the individual will table down the process of making the typical dish and when it will be ready.
 
-## Gitpod Reminders
+# Website
+Here is the <a href="https://donald-task-manager-project.herokuapp.com/" target="_blank">Website</a>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# UX
+This website in summary is meant to make it easier for the individual to understand Nigerian cultural food and directions on how to prepare the dish using several types of recipe.
 
-`python3 -m http.server`
+## User stories
+
 
 A blue button should appear to click: *Make Public*,
 
