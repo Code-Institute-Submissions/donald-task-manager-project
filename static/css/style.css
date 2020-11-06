@@ -21,7 +21,7 @@ body {
 }
 .sign_block {
     line-height: 3;
-    width: 6;
+    width: 0;
 }
 
 .font-text{
@@ -46,11 +46,11 @@ body {
 
 .column_1_span{
     color: darkred;
-    font-style: bold;
+    font: bold;
 }
 
 .column_1{
-    margin-top: 5px auto;
+    margin-top: 5px;
     margin: auto;
     opacity: 0.7;
 }
