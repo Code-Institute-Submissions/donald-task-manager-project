@@ -84,7 +84,9 @@ Using DeVop technologies can be browsed using these platforms:
 ## Validation
 The website was tested using W3 CSS 
 ## Results from using Lighthouse
-The result of the website testing is here. Note: to view this webpage you need to add Lighthouse to the browser extension.
+The result of the website testing is [Here](https://db3pap007files.storage.live.com/y4mZHHPNLiL6S-WPrwsVnfyFVeNnPfODkHwdULhLQyEta7G84vHnFSUgJXVorrWXrLcqAOD4HOTLOV3YMlFR1QkvcAiht9Oli658XcTFKB_nQz6E3nls02NCfpH78naaHO2KPlwmSp8utKfOSWvR-FzR3tMXcvFlg-e1WaoPiyNSIeWkLCGGg5Eph03_7JTgFxj?width=1129&height=1963&cropmode=none). 
+
+Note: to view this webpage you need to add Lighthouse to the browser extension.
 Here is the screenshot of the workspace of Python and the rest.
 
 
