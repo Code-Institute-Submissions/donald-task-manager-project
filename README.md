@@ -9,6 +9,11 @@ Here is the <a href="https://donald-task-manager-project.herokuapp.com/" target=
 
 # UX
 This website in summary is meant to make it easier for the individual to understand Nigerian cultural food and directions on how to prepare the dish using several types of recipe.
+The Home Page is is a simple introduction with food slides of Nigerian food examples and simple statements. This is to provide an outlook as to what you understand in a Nigeria food and their recipes. Normally in a food website, there is just too much information about several foods as well as updates. But the website is a simple food data that is strictly meant for Nigeria traditional foods and their methodology in the food making. Also included is when they are meant to be made.
+
+The sign in and sign up pages backgrounds are wooden and few fruit images. The forms are light in colour so as to give a clear text when typing alongside sign in font awesome icons.
+
+While you are signed in, you can go to the new file page and fill in the details. When you submit it takes you to your account page. There you can make changes to one of the files on the account. 
 
 ## User stories
 This website is useful because:
@@ -22,7 +27,7 @@ This is a multi-page website. There are pages containing where to signup, signin
 In addition there is the New File page where the individual is able to create and submit a new food diary. 
 
 ## Wireframing
-This is the wireframe of the website.
+This is the wireframe of the website.[Here it is](https://db3pap007files.storage.live.com/y4mZHHPNLiL6S-WPrwsVnfyFVeNnPfODkHwdULhLQyEta7G84vHnFSUgJXVorrWXrLcqAOD4HOTLOV3YMlFR1QkvcAiht9Oli658XcTFKB_nQz6E3nls02NCfpH78naaHO2KPlwmSp8utKfOSWvR-FzR3tMXcvFlg-e1WaoPiyNSIeWkLCGGg5Eph03_7JTgFxj?width=1129&height=1963&cropmode=none)
 
 ## Features
 Most of the website pages have Nigerian food background images. The Sign Up and Sign in pages have form boxes where the invdividual can put in their respective details.
@@ -59,7 +64,10 @@ For final Deployment:
 - git status
 - git commit -m "message"
 - git push
-
+## Using herokuapp
+Instead of using the common Github to deploy the website herokuapp is needed to just that. This is because Github pages can't run python or flask servers.. This increases the site functions. This app is free and is not used for web production.
+To use the app, you need to sign up to create a new account. Navigate through to the dashboard and pick the 'New' button. Then go to 'Create' new app. Give the app a new name. When it is time to deploy the website select the button at the right top. 
+Moreover the website is deployed by linking the Github page to the herokuapp. 
 # Testing
 Using DeVop technologies can be browsed using these platforms:
 ### Google Chrome DeVop
@@ -79,8 +87,16 @@ The website was tested using W3 CSS
 The result of the website testing is here. Note: to view this webpage you need to add Lighthouse to the browser extension.
 Here is the screenshot of the workspace of Python and the rest.
 
+
 ## The functionality of the website
-The website is tested to see that the forms were filled in successfully. The details of each forms where checked on the database of MongoDB to see if they exist. 
+The website is tested to see that the forms were filled in successfully. The details of each forms where checked on the database of MongoDB to see if they exist.
+
+## User stories
+**- The user is able to log/sign up into the account and create the right Nigerian recipe.**
++ I am of an Igbo origin and I love Egusi soup. But I need to create a data where I can make the right recipe for the food.
+
+**- The user is cannot remember all the recipe formula for the food making so she made an account to list the recipe and describe the methodoly of making the food.**
++ I like to make Amala and Ewedu but they are too complicated and therefore I tend to forget how to make them. So this website is good in that I can list the date to make it and following the recorded description on how to make it. 
 
 # Acknowledgement
 - A special thanks to Code Institute for providing me this opportunity in undertaking this project.
