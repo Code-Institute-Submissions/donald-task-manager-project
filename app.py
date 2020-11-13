@@ -26,7 +26,7 @@ def home():
 
 @app.route("/allow_tasks")
 def allow_tasks():
-    tasks = list(mongo.db.tasks.find())
+    tasks = list(mongo.db.tasks.find({"first_name": session["first"]}))
     return render_template("tasks.html", tasks=tasks)
 
 
@@ -46,11 +46,11 @@ def sign_up():
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.donald_users.insert(sign_up)
+        mongo.db.donald_users.insert_one(sign_up)
 
         session["first"] = request.form.get("first_name")
-        flash("Sign in a success!")
-        return redirect(url_for("account", email=session["first"]))
+        flash("Sign up a success!")
+        return redirect(url_for("home", email=session["first"]))
 
     return render_template("sign_up.html")
     
