@@ -74,8 +74,11 @@ body {
     background-size: contain, cover;
 }
 
+main{
+    min-height: 100vh;
+}
 .card{
-    width: 60%;
+    width: 500px;
     margin: auto;
 }
 
@@ -107,4 +110,8 @@ body {
 
 .card{
     margin-bottom: 5px;
+}
+
+nav .brand-logo{
+    font-size: 16px;
 }

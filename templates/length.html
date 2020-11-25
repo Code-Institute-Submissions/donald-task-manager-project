@@ -16,7 +16,7 @@
     <nav class="nav-extended nav_color purple lighten-2">
         <div class="nav-wrapper">
         <a href="{{ url_for('home') }}" class="brand-logo">Nigerian Food data</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i>This is for mobile</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home Page</a></li>
             {% if session.first %}
@@ -32,10 +32,10 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-            <li class="center-align pink-text text-darken-3">Interesting Stories</li>
-            <li><a href="{{ url_for('allow_tasks') }}">Home Page</a></li>
+            <a href="{{ url_for('home') }}" class="brand-logo">Nigerian Food data</a>
+            <li><a href="{{ url_for('home') }}">Home Page</a></li>
             {% if session.first %}
-                <li><a href="{{ url_for('account', email=session['first']) }}">My Account</a></li>
+                <li><a href="{{ url_for('allow_tasks') }}">My Account</a></li>
                 <li><a href="{{ url_for('new_file') }}">New File</a></li>
                 <li><a href="{{ url_for('sign_out') }}">Sign Out</a></li>
             {% else %}

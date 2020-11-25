@@ -43,17 +43,27 @@ These are the following Google fonts used in this website:
 - Sansita Swashed
 
 # Technologies
+- ### PYTHON: This is the main chief software language programme used to create the readability of the website. The main version used here the version Python 3.8.
 - ### HTML5:  this is used to create the major content of the website
 - ### CSS3: this is used to design the font style details
 - ### JAVASCRIPT :
 - *Javascript:* This is to provide the effective functions to the HMTL.
 - *JQUERY:* Javascript technology used for DOM designs
-- ### Flask: It is an easy web application used by Python for complex applications. 
-- ### Jinja: this is a Flask-Python-based language where the templates are evaluated using a sandbox. 
-- ### Materialize: This is a library component used to give the constructed webpages the design effects. This is adhere to    the modern principles such as mobile compartibility on browsers, etc. The alternative to this is Bootstrap.
-- ### Werkzeug: this is a WSGI web application library. This is was used to develop hash password.
-- ### MongoDB Atlas: This is a cloud database that contains the user details.
-- ### PyMongo: this tutorial program MongoDB stores document into MongoDB. 
+- ### FLASK: It is an easy web application used by Python for complex applications. 
+- ### JINJA: this is a Flask-Python-based language where the templates are evaluated using a sandbox. 
+- ### MATERIALIZE: This is a library component used to give the constructed webpages the design effects. This is adhere to the modern principles such as mobile compartibility on browsers. The alternative to this is Bootstrap.
+- ### WERKZEUG: this is a WSGI web application library. This is was used to develop hash password.
+- ### MONGODB ATLAS: This is a cloud database that contains the user details. This is one of the most popular NoSQL database.
+- ### PYMONGO: this tutorial program MongoDB stores document into the MongoDB database known as MongoDB Atlas. PyMongo in this case is imported from Flask_Pymongo as PyMongo is a package with MongoDB. 
+- ### PIP3: This is used to install several of the technologies into Python3 such as PyMongo, Jinja, etc. The new version used in this case pip version 20.2.4. 
+- ### OBJECTID: This is used by MongoDB to generate a default ID value in a specific document.
+
+## Installation
+- PIP3: The installation process begins using pip3 install. To execute the pip in the presently used Python version, python -m pip code was used. To view the version being installed, pip3 --version was entered displaying it as 'pip 20.2.4 from /workspace/.pip-modules/lib/python3.8/site-packages/pip (python 3.8)'
+- Flask: This latest version was installed using  pip3 install flask.
+- Werkzeug: The main requirement for this installation is a Python3 and more present. To install this, the code 'pip install -U Werkzeug' was used.
+
+
 # Deployment of the project
 The workspace is saved by using CTRL+S. To deploy the workspace temporary to a github, it can be done using:
 - python3 -m http.server
@@ -72,19 +82,32 @@ Moreover the website is deployed by linking the Github page to the herokuapp.
 Using DeVop technologies can be browsed using these platforms:
 ### Google Chrome DeVop
 ### Mozilla DeVop
-### Mobile Dev tools
+### All Dev Emulated Devices
 - All Samsung Galaxy series
 - All iPhone series
-- All iPhone series
+- All Blackberry series
+- All Galaxy series
+- All Nexus series
+- All Pixel series
+- All IPad series
 ### Mobile Browsing DeVop tools
 - Safari Browser
 - Google Chrome
 - Mozilla Firefox
+- Opera Broswer
+
+Example pictures of the technologies can be viewed below:
+
+<img src="https://db3pap007files.storage.live.com/y4mJNHvvpgw4ZHYxUbXurYeoz5w8U0opGIVw_M3fKh6zcCLuVhZmn6AWgePWC8BTkIm0Y-pMs6iIwHXDDYy-aRi0sROQFdu-L5Tpo7YQaI0hA7OiyEECn43FTxrHu_jeiWB2OiCMs6oevJ1osTM2RHQxhrzuk0GSNnKvsdpVf9eFLJvuiCEyGBtOX9vxmpz4rX9?width=270&height=514&cropmode=none" width="200" height="360" />
+<img src="https://db3pap007files.storage.live.com/y4ms2o4Vk3flDGPm-9_mRdkYLWjmQtiGQi4s9RX8xoWfycsfWsFtcVXKYVBPquTb946ZlYxF7-7BJEgYJWTW-Et0vN-4Odono8Snm0qYbuYwsvmM_sKDO3SRaSdh60gvTUgx-2PChd63Z20bDFQLt5SXUGZlrY1fvYkOvoCM-px7wgRpsk80hESZ93fiIqI6vB0?width=381&height=550&cropmode=none" width="250" height="400" />
 
 ## Validation
-The website was tested using W3 CSS 
+- The CSS was tested using a CSS validation site known as https://jigsaw.w3.org/css-validator/
+- The Javascript was tested using a JS validation site known as http://beautifytools.com/javascript-validator.php . However on line 17, the 'instance' and 'M' were copied from Materialise and it is used in providong the collapse "effect" needed.
+
 ## Results from using Lighthouse
-The result of the website testing is [Here](https://db3pap007files.storage.live.com/y4mZHHPNLiL6S-WPrwsVnfyFVeNnPfODkHwdULhLQyEta7G84vHnFSUgJXVorrWXrLcqAOD4HOTLOV3YMlFR1QkvcAiht9Oli658XcTFKB_nQz6E3nls02NCfpH78naaHO2KPlwmSp8utKfOSWvR-FzR3tMXcvFlg-e1WaoPiyNSIeWkLCGGg5Eph03_7JTgFxj?width=1129&height=1963&cropmode=none). 
+Lighthouse is easy and free to use instead of other validation tools such as Pigdom. 
+The result of the website testing is [Here](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fdonald-task-manager-project.herokuapp.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext). 
 
 Note: to view this webpage you need to add Lighthouse to the browser extension.
 Here is the screenshot of the workspace of Python and the rest.
@@ -97,7 +120,7 @@ The website is tested to see that the forms were filled in successfully. The det
 **- The user is able to log/sign up into the account and create the right Nigerian recipe.**
 + I am of an Igbo origin and I love Egusi soup. But I need to create a data where I can make the right recipe for the food.
 
-**- The user is cannot remember all the recipe formula for the food making so she made an account to list the recipe and describe the methodoly of making the food.**
+**- The user cannot remember all the recipe formula for the food making so she made an account to list the recipe and describe the methodoly of making the food.**
 + I like to make Amala and Ewedu but they are too complicated and therefore I tend to forget how to make them. So this website is good in that I can list the date to make it and following the recorded description on how to make it. 
 
 # Acknowledgement
@@ -109,24 +132,3 @@ The website is tested to see that the forms were filled in successfully. The det
 
  
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!

@@ -26,7 +26,8 @@ def home():
 
 @app.route("/allow_tasks")
 def allow_tasks():
-    tasks = list(mongo.db.tasks.find({"first_name": session["first"]}))
+    tasks = list(mongo.db.tasks.find({"email": session["first"]}))
+    print(tasks)
     return render_template("tasks.html", tasks=tasks)
 
 
