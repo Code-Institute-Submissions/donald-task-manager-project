@@ -96,7 +96,7 @@ Using DeVop technologies can be browsed using these platforms:
 - Mozilla Firefox
 - Opera Broswer
 
-Example pictures of the technologies can be viewed below:
+These are the example pictures of non-laptop technologies:
 
 <img src="https://db3pap007files.storage.live.com/y4mJNHvvpgw4ZHYxUbXurYeoz5w8U0opGIVw_M3fKh6zcCLuVhZmn6AWgePWC8BTkIm0Y-pMs6iIwHXDDYy-aRi0sROQFdu-L5Tpo7YQaI0hA7OiyEECn43FTxrHu_jeiWB2OiCMs6oevJ1osTM2RHQxhrzuk0GSNnKvsdpVf9eFLJvuiCEyGBtOX9vxmpz4rX9?width=270&height=514&cropmode=none" width="200" height="360" />
 <img src="https://db3pap007files.storage.live.com/y4ms2o4Vk3flDGPm-9_mRdkYLWjmQtiGQi4s9RX8xoWfycsfWsFtcVXKYVBPquTb946ZlYxF7-7BJEgYJWTW-Et0vN-4Odono8Snm0qYbuYwsvmM_sKDO3SRaSdh60gvTUgx-2PChd63Z20bDFQLt5SXUGZlrY1fvYkOvoCM-px7wgRpsk80hESZ93fiIqI6vB0?width=381&height=550&cropmode=none" width="250" height="400" />
@@ -122,6 +122,9 @@ The website is tested to see that the forms were filled in successfully. The det
 
 **- The user cannot remember all the recipe formula for the food making so she made an account to list the recipe and describe the methodoly of making the food.**
 + I like to make Amala and Ewedu but they are too complicated and therefore I tend to forget how to make them. So this website is good in that I can list the date to make it and following the recorded description on how to make it. 
+
+**- This is my mum who thought that the website is great for her as she will use it to preserve the recorded recipes she will need for making a typical complex soup.**
++ I have not been feeling well for the last few months and over the time I have forgotten how to make the exact special Ofe-Oha Igbo soup. This is because of the high speciality in it and due to its complexity to make it. Using this website is very good for me as I can follow the tabulation and recipe preparation steps in making it.
 
 # Acknowledgement
 - A special thanks to Code Institute for providing me this opportunity in undertaking this project.
