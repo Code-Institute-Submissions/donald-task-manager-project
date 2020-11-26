@@ -2,7 +2,7 @@
 
 # About Nigeria Food Data
 
-In this 3rd project will be all about a food data where an individual (who understand's Nigeria food dish) can create a data on what type of dish and when it will be prepared. As you may know Nigeria is a country with several traditions, languages, and cultures. This means there will be several types of food dish from those distinctive cultures. For example with the Yoruba culture, one of the most common food dish is the Amala staple with the drawy Ewa soup. The Igbo culture has one of the most common food dish which is Oha/Okazi soup with the Eba staple. A popular soup very common in the Central South of Nigeria (dubbed the South-South Region) is the Edikaiko. There are many more common foods in Nigeria that can be explored such as Joloff Rice, Plaintain dish, Yam, Cassava, etc. The also reason also for this website is that the individual will table down the process of making the typical dish and when it will be ready.
+In this 3rd project will be all about a food data where an individual (who understand's Nigeria food dish) can create a data on what type of dish and when it will be prepared. As you may know Nigeria is a country with several traditions, languages, and cultures. This means there will be several types of food dish from those distinctive cultures. For example with the Yoruba culture, one of the most common food dish is the Amala staple with the drawy Ewa soup. The Igbo culture has one of the most common food dish which is Oha/Okazi soup with the Eba staple. A popular soup very common in the Central South of Nigeria (dubbed the South-South Region) is the Edikaiko. There are many more common foods in Nigeria that can be explored such as Joloff Rice, Plaintain dish, Yam, Cassava, etc. The reason also for this website is that the individual will table down the process of making the typical dish and when it will be ready.
 
 # Website
 Here is the <a href="https://donald-task-manager-project.herokuapp.com/" target="_blank">Website</a>
@@ -14,6 +14,8 @@ The Home Page is is a simple introduction with food slides of Nigerian food exam
 The sign in and sign up pages backgrounds are wooden and few fruit images. The forms are light in colour so as to give a clear text when typing alongside sign in font awesome icons.
 
 While you are signed in, you can go to the new file page and fill in the details. When you submit it takes you to your account page. There you can make changes to one of the files on the account. 
+
+The use of GoodUI was used to test the consistency of UI/UX of the site most especially on the Sign In section. This produced a "simple and explained sign in page".
 
 ## User stories
 This website is useful because:
