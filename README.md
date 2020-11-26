@@ -105,6 +105,10 @@ These are the example pictures of non-laptop technologies:
 - The CSS was tested using a CSS validation site known as https://jigsaw.w3.org/css-validator/
 - The Javascript was tested using a JS validation site known as http://beautifytools.com/javascript-validator.php . However on line 17, the 'instance' and 'M' were copied from Materialise and it is used in providong the collapse "effect" needed.
 
+### Debugging issues
+- When you Python debugging method on HTML codes there will be a development of errors. 
+- Also using the Python Debugging method on this development is not intended for production deployment.
+
 ## Results from using Lighthouse
 Lighthouse is easy and free to use instead of other validation tools such as Pigdom. 
 The result of the website testing is [Here](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fdonald-task-manager-project.herokuapp.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext). 
